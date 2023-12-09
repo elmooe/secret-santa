@@ -12,7 +12,7 @@
 .App-header {
   background-color: #282c34;
   width: 90%; /* Asetetaan leveys prosentteina */
-  max-width: 600px; /* Maksimileveys isommilla näytöillä */
+  max-width: 400px; /* Maksimileveys isommilla näytöillä */
   min-height: 50vh;
   display: flex;
   flex-direction: column;
@@ -29,8 +29,8 @@
   padding: 12px;
   font-size: 4vmin; /* Dynaaminen fonttikoko */
   margin: 10px 0;
-  width: 80%; /* Suurempi leveys pienillä näytöillä */
-  max-width: 400px;
+  width: 60%; /* Suurempi leveys pienillä näytöillä */
+  max-width: 300px;
   border: 2px solid #fff;
   border-radius: 5px;
 }
