@@ -1,6 +1,7 @@
 .App {
+  height: 100vh;
+  width: 100vw;
   text-align: center;
-  height: 100vh; 
   background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.pinimg.com/564x/71/4c/95/714c9586f0a558338da01b28564ec5d4.jpg');
   background-size: cover; 
   background-position: center;
@@ -15,14 +16,13 @@
   background-color: #194280;
   width: 80%;
   max-width: 400px;
-  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(12px + 2vmin);
   color: white;
-  padding: 0px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -39,9 +39,12 @@ li {
 
 .ilmoitus {
   display: flex;
+  max-width: 300px;
+  display: flex;
   background-color: #b8232f;
   color: white;
   font-size: 6vmin;
+  box-sizing: border-box;
 }
 
 .wishlist-container {
@@ -81,6 +84,7 @@ li {
   width: 100%;
   max-width: 300px;
   border: 2px solid #fff;
+  box-sizing: border-box;
   border-radius: 5px;
 }
 
@@ -103,6 +107,7 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 a:-webkit-any-link {
