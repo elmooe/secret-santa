@@ -10,10 +10,9 @@
 }
 
 .App-header {
-  background-image: url('https://i.pinimg.com/originals/76/b8/67/76b86795da79b1767d36371a14178bc6.png');
   background-size: cover;
   background-position: center;
-  background-color: #282c34;
+  background-color: #194280;
   width: 80%;
   max-width: 400px;
   min-height: 50vh;
@@ -28,13 +27,51 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+li {
+  list-style-type: none;
+  font-size: medium;
+  font-weight: 800;
+}
+
+.WishlistForUser {
+  padding-bottom: 10px;
+}
+
 .ilmoitus {
   display: flex;
-  padding: 8px;
   background-color: #b8232f;
   color: white;
   font-size: 6vmin;
-  margin: 10px 0;
+}
+
+.wishlist-container {
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #ccc; /* Optional: add a border */
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.wishlist-container::-webkit-scrollbar {
+  width: 8px; /* Thin scrollbar for webkit browsers */
+}
+
+.wishlist-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light grey background for scrollbar track */
+}
+
+.wishlist-container::-webkit-scrollbar-thumb {
+  background: #da0707; /* Darker grey for scrollbar thumb */
+  border-radius: 4px;
+}
+
+.ReceiverWishlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-decoration: underline;
+  font-size: medium;
 }
 
 .App-header input {
@@ -70,8 +107,8 @@
 
 a:-webkit-any-link {
   display: flex;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   color: white;
   text-decoration: none;
   margin-top: 10px;

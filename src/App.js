@@ -4,6 +4,7 @@ import { database } from './firebase';
 import { ref, push, onValue, set, get, child } from 'firebase/database';
 import NameRoller from './NameRoller';
 import CelebrationNote from './CelebrationNote';
+import WishlistForUser from './WishlistForUser';
 
 function App() {
   const [username, setUsername] = useState('');
@@ -89,10 +90,8 @@ function App() {
     const usersRef = ref(database, `users/${newUsername.toLowerCase()}`);
     const giversRef = ref(database, `givers/${newUsername.toLowerCase()}`);
   
-    // Lisää käyttäjä tietokantaan
     set(usersRef, { password: newPassword })
       .then(() => {
-        // Lisää käyttäjän nimi givers-listalle salasanoineen
         set(giversRef, newUsername.toLowerCase())
           .then(() => {
             alert('Käyttäjä luotu onnistuneesti!');
@@ -170,9 +169,9 @@ function App() {
         <h1>Secret Santa🎅</h1>
         {!isLoggedIn && !isCreatingUser ? (
           <div className="Inputs">
-            <a className='ilmoitus'>Pääset kirjautumaan, kun kaikki osallistujat ovat luoneet käyttäjän!</a>
+
+            <a className='ilmoitus'>Kirjaudu sisään ja luo toivelista itsellesi!</a>
             
-            {/*
             <input
               type="text"
               placeholder="Syötä etunimi"
@@ -186,7 +185,6 @@ function App() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <button onClick={handleLogin}>Kirjaudu</button>
-            */}
 
             <div className="href">
               <a href='#' onClick={() => setIsCreatingUser(true)}>Luo käyttäjä</a>
@@ -213,17 +211,20 @@ function App() {
           </div>
         ) : (
           <>
+          
+          <WishlistForUser username={username.toLowerCase()} />
+        
+          {/*
+          <button onClick={generateSecretSantaPairs}>Arvo Secret Santa -parit</button>
+        
+          <NameRoller
+            selectedName={selectedName}
+            givers={givers}
+            onSpinComplete={handleSpinComplete}
+          />
+          {showCelebration && <CelebrationNote selectedName={selectedName} username={username} />}
+          */}
 
-            {/*
-            <button onClick={generateSecretSantaPairs}>Arvo Secret Santa -parit</button>
-            */}
-            
-            <NameRoller
-              selectedName={selectedName}
-              givers={givers}
-              onSpinComplete={handleSpinComplete}
-            />
-            {showCelebration && <CelebrationNote selectedName={selectedName} />}
           </>
         )}
       </header>
