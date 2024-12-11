@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   height: 100vh; 
-  background-image: url('https://images5.alphacoders.com/112/1120179.jpg');
+  background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.pinimg.com/564x/71/4c/95/714c9586f0a558338da01b28564ec5d4.jpg');
   background-size: cover; 
   background-position: center;
   display: flex;
@@ -10,44 +10,78 @@
 }
 
 .App-header {
+  background-image: url('https://i.pinimg.com/originals/76/b8/67/76b86795da79b1767d36371a14178bc6.png');
+  background-size: cover;
+  background-position: center;
   background-color: #282c34;
-  width: 90%; /* Asetetaan leveys prosentteina */
-  max-width: 400px; /* Maksimileveys isommilla näytöillä */
+  width: 80%;
+  max-width: 400px;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(12px + 2vmin); /* Suurempi fontti pienillä näytöillä */
+  font-size: calc(12px + 2vmin);
   color: white;
-  padding: 20px; /* Lisätään paddingia */
-  border-radius: 10px; /* Pyöristetyt kulmat */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Varjostus */
+  padding: 0px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ilmoitus {
+  display: flex;
+  padding: 8px;
+  background-color: #b8232f;
+  color: white;
+  font-size: 6vmin;
+  margin: 10px 0;
 }
 
 .App-header input {
   padding: 12px;
-  font-size: 4vmin; /* Dynaaminen fonttikoko */
+  font-size: 4vmin;
   margin: 10px 0;
-  width: 60%; /* Suurempi leveys pienillä näytöillä */
+  width: 100%;
   max-width: 300px;
   border: 2px solid #fff;
   border-radius: 5px;
 }
 
 .App-header button {
+  -webkit-text-fill-color: #ffffff;
+  margin: 2px 0;
   padding: 10px 20px;
-  font-size: 4vmin; /* Dynaaminen fonttikoko */
-  background-color: #61dafb;
+  font-size: 5vmin;
+  background-color: #b8232f;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  width: 70%;
+  color: white;
+  font-weight: 700;
 }
 
-/* Pienemmille näytöille */
+.Inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a:-webkit-any-link {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+  text-decoration: none;
+  margin-top: 10px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 600px) {
   .App-header {
-    min-width: 80vw; /* Suurempi leveys pienillä näytöillä */
-    font-size: 5vmin; /* Suurempi fontti pienillä näytöillä */
+    min-width: 80vw;
+    font-size: 5vmin;
   }
 }
