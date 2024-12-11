@@ -213,6 +213,8 @@ function App() {
           <>
           
           <WishlistForUser username={username.toLowerCase()} />
+          <a style={{padding: '20px'}}>Note: <br></br>
+            Kunhan jokainen osallistuja on tehnyt toivelistan, arvotaan parit :-)</a>
         
           {/*
           <button onClick={generateSecretSantaPairs}>Arvo Secret Santa -parit</button>

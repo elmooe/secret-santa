@@ -2,26 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { database } from './firebase';
 import { ref, onValue } from 'firebase/database';
 
-const Wishlist = ({ username, receiver }) => {
-  const [userWishlist, setUserWishlist] = useState([]);
+const Wishlist = ({ receiver }) => {
   const [receiverWishlist, setReceiverWishlist] = useState([]);
-  const [newWish, setNewWish] = useState('');
   const [showReceiverWishlist, setShowReceiverWishlist] = useState(false);
 
-  // Hae kirjautuneen käyttäjän toivelista
-  useEffect(() => {
-    if (username) {
-      const userWishlistRef = ref(database, `users/${username}/wishlist`);
-      const unsubscribe = onValue(userWishlistRef, (snapshot) => {
-        const data = snapshot.val();
-        setUserWishlist(data || []);
-      });
-
-      return () => unsubscribe();
-    }
-  }, [username]);
-
-  // Hae receiverin toivelista
   useEffect(() => {
     if (receiver) {
       const receiverWishlistRef = ref(database, `users/${receiver}/wishlist`);
@@ -44,7 +28,6 @@ const Wishlist = ({ username, receiver }) => {
         <a href='#' onClick={handleToggleReceiverWishlist}>
           {showReceiverWishlist ? 'Piilota vastaanottajan toivelista' : 'Näytä vastaanottajan toivelista'}
         </a>
-
         {showReceiverWishlist && (
           <div className="Wishlist mt-4">
             <ul className="wishlist-container">

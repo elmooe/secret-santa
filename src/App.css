@@ -50,7 +50,6 @@ li {
 .wishlist-container {
   max-height: 150px;
   overflow-y: auto;
-  border: 1px solid #ccc; /* Optional: add a border */
   padding: 10px;
   border-radius: 4px;
 }
