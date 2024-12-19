@@ -157,7 +157,7 @@ const NameRoller = ({
       <button 
         onClick={handleRoll} 
         disabled={isRolling || !selectedName}>
-        {isRolling ? 'Arvotaan...' : 'Paina arpoaksesi'}
+        {isRolling ? 'Arvotaan...' : 'Paina arpoaksesi n. 50€ lahja'}
       </button>
       {showWishlist && (
         <div style={styles.wishlist}>

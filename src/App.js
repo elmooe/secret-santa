@@ -169,9 +169,9 @@ function App() {
         <h1>Secret Santa🎅</h1>
         {!isLoggedIn && !isCreatingUser ? (
           <div className="Inputs">
-
+            {/*
             <a className='ilmoitus'>Kirjaudu sisään ja luo toivelista itsellesi!</a>
-            
+            */}
             <input
               type="text"
               placeholder="Syötä etunimi"
@@ -211,22 +211,16 @@ function App() {
           </div>
         ) : (
           <>
-          
-          <WishlistForUser username={username.toLowerCase()} />
-          <a style={{padding: '20px'}}>Note: <br></br>
-            Kunhan jokainen osallistuja on tehnyt toivelistan, arvotaan parit :-)</a>
-        
           {/*
+          <WishlistForUser username={username.toLowerCase()} />
           <button onClick={generateSecretSantaPairs}>Arvo Secret Santa -parit</button>
-        
+          */}
           <NameRoller
             selectedName={selectedName}
             givers={givers}
             onSpinComplete={handleSpinComplete}
           />
           {showCelebration && <CelebrationNote selectedName={selectedName} username={username} />}
-          */}
-
           </>
         )}
       </header>

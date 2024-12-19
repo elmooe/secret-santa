@@ -26,7 +26,7 @@ const Wishlist = ({ receiver }) => {
     <div className="WishlistForUser">
       <div className="">
         <a href='#' onClick={handleToggleReceiverWishlist}>
-          {showReceiverWishlist ? 'Piilota vastaanottajan toivelista' : 'Näytä vastaanottajan toivelista'}
+          {showReceiverWishlist ? 'Piilota vastaanottajan toivelista' : 'Näytä vastaanottajan toivelista painamalla tästä'}
         </a>
         {showReceiverWishlist && (
           <div className="Wishlist mt-4">

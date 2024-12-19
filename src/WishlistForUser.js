@@ -5,7 +5,7 @@ import { ref, set, onValue } from 'firebase/database';
 const WishlistForUser = ({ username }) => {
   const [wishlist, setWishlistState] = useState([]);
   const [newWish, setNewWish] = useState('');
-  const [isVisible, setIsVisible] = useState(false); // Aluksi lista on piilossa
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     if (username) {
@@ -44,7 +44,7 @@ const WishlistForUser = ({ username }) => {
   };
 
   const toggleVisibility = () => {
-    setIsVisible((prev) => !prev); // Vaihdetaan näkyvyyttä
+    setIsVisible((prev) => !prev); 
   };
 
   return (
